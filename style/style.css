@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#book-input {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-body .bi {
+  font-size: 1.75rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  #book-input {
+    width: 90%;
+  }
+
+  #search-form {
+    width: 50%;
+  }
+}
