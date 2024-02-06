@@ -238,7 +238,23 @@ document.addEventListener(RENDER_EVENT, function () {
       completedBookList.append(bookElement);
     }
   }
+  const emptyUncompletedBook = uncompletedBookList.children.length === 0;
+  if (emptyUncompletedBook) {
+    uncompletedBookList.append(emptyText());
+  }
+  const emptyCompletedBook = completedBookList.children.length === 0;
+  if (emptyCompletedBook) {
+    completedBookList.append(emptyText());
+  }
 });
+
+function emptyText() {
+  const emptyText = document.createElement("p");
+  emptyText.innerText = "there are no books yet";
+  emptyText.classList.add("fst-italic", "text-center", "w-100");
+
+  return emptyText;
+}
 
 function saveData() {
   if (isStorageExist()) {
